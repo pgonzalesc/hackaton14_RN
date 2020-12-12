@@ -4,16 +4,18 @@ import Carousel from '../../components/Carousel/Carousel';
 import {carouselData} from '../../data/carouselData';
 import ProductSlider from '../../components/ProductSlider/ProducttSlider';
 import {productSliderData} from '../../data/productSliderData';
+import Menu from '../../components/Menu';
 
 const Home = ({navigation}) => {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text style={{ fontSize: 30 }}>Home</Text>
+            <Menu />
             <View style={{flex: 1}}>
+                <Text style={styles.title}>Promo for you</Text>
                 <Carousel data={carouselData} />
             </View>
             <View style={{flex: 1}}>
-                <Text style={styles.title}>T-Shirt</Text>
+                <Text style={styles.title}>Recomendation</Text>
                 <ProductSlider data={productSliderData} />
             </View>
         </View>
