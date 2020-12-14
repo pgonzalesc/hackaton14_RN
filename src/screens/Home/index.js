@@ -16,7 +16,7 @@ const Home = ({navigation}) => {
             </View>
             <View style={{flex: 1}}>
                 <Text style={styles.title}>Recomendation</Text>
-                <ProductSlider data={productSliderData} />
+                <ProductSlider navigation={navigation} data={productSliderData} />
             </View>
         </View>
     );

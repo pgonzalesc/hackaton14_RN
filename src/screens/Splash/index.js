@@ -42,6 +42,6 @@ const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 25,
     }
-  });
+});
 
 export default Splash;

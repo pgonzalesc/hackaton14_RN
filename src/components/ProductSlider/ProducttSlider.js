@@ -18,8 +18,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const ProductSlider = ({data}) => {
+const ProductSlider = ({navigation, data}) => {
   const scrollX = new Animated.Value(0);
+
+  const detail = (item) => {
+    navigation.navigate('Detalle', item);
+  };
 
   if (data && data.length) {
     return (
@@ -34,7 +38,7 @@ const ProductSlider = ({data}) => {
           decelerationRate="fast"
           showsHorizontalScrollIndicator={false}
           renderItem={(item) => {
-            return <ProductSliderItem item={item.item} />;
+            return <ProductSliderItem item={item.item} onPress={()=>detail(item.item)}/>;
           }}
           onScroll={Animated.event([
             {nativeEvent: {contentOffset: {x: scrollX}}},
