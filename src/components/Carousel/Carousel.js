@@ -36,6 +36,8 @@ const styles = StyleSheet.create({
   },
 });
 
+const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
+
 const Carousel = ({data}) => {
   const scrollX = new Animated.Value(0);
   let position = Animated.divide(scrollX, width);
@@ -48,7 +50,7 @@ const Carousel = ({data}) => {
   if (data && data.length) {
     return (
       <View style={{flex: 1}}>
-        <FlatList
+        <AnimatedFlatList
           ref={(flatList) => {
             this.flatList = flatList;
           }}
@@ -64,9 +66,13 @@ const Carousel = ({data}) => {
           renderItem={(item) => {
             return <CarouselItem item={item.item} />;
           }}
-          onScroll={Animated.event([
-            {nativeEvent: {contentOffset: {x: scrollX}}},
-          ])}
+          onScroll={Animated.event(
+            [{nativeEvent: {contentOffset: {x: scrollX}}}],
+            {
+                //listener: (event) => console.log(event),
+                useNativeDriver: true,
+            },
+          )}
         />
         <View style={styles.dot}>
           {data.map((_, i) => {

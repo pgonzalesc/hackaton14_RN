@@ -18,6 +18,8 @@ const styles = StyleSheet.create({
   },
 });
 
+const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
+
 const ProductSlider = ({navigation, data}) => {
   const scrollX = new Animated.Value(0);
 
@@ -28,7 +30,7 @@ const ProductSlider = ({navigation, data}) => {
   if (data && data.length) {
     return (
       <View style={{flex: 1}}>
-        <FlatList
+        <AnimatedFlatList
           data={data}
           keyExtractor={(item, index) => 'key' + index}
           horizontal
@@ -40,9 +42,13 @@ const ProductSlider = ({navigation, data}) => {
           renderItem={(item) => {
             return <ProductSliderItem item={item.item} onPress={()=>detail(item.item)}/>;
           }}
-          onScroll={Animated.event([
-            {nativeEvent: {contentOffset: {x: scrollX}}},
-          ])}
+          onScroll={Animated.event(
+            [{nativeEvent: {contentOffset: {x: scrollX}}}],
+            {
+                //listener: (event) => console.log(event),
+                useNativeDriver: true,
+            },
+          )}
         />
       </View>
     );
