@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <Detalle/> Debe de mostrar <Detalle/> correctamente 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#3E706F",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginHorizontal": 20,
+        "marginVertical": 15,
+      }
+    }
+  >
+    <ForwardRef
+      onPress={[Function]}
+    >
+      <Icon
+        allowFontScaling={false}
+        color="#e1e1e1"
+        name="md-arrow-back-outline"
+        size={30}
+      />
+    </ForwardRef>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 50,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#e1e1e1",
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Americano Coffee
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 20,
+        "marginTop": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#D5E46D",
+          "fontSize": 22,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      $
+      15
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginHorizontal": 20,
+        }
+      }
+    >
+      <ForwardRef
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#B6BF62",
+            "borderColor": "#e1e1e1",
+            "borderRadius": 8,
+            "borderWidth": 0.3,
+            "marginVertical": 10,
+            "paddingHorizontal": 14,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#376363",
+              "fontSize": 15,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            }
+          }
+        >
+          S
+        </Text>
+      </ForwardRef>
+      <ForwardRef
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#376363",
+            "borderColor": "#e1e1e1",
+            "borderRadius": 8,
+            "borderWidth": 0.3,
+            "marginVertical": 10,
+            "paddingHorizontal": 14,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#e1e1e1",
+              "fontSize": 15,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            }
+          }
+        >
+          M
+        </Text>
+      </ForwardRef>
+      <ForwardRef
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#376363",
+            "borderColor": "#e1e1e1",
+            "borderRadius": 8,
+            "borderWidth": 0.3,
+            "marginVertical": 10,
+            "paddingHorizontal": 14,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#e1e1e1",
+              "fontSize": 15,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            }
+          }
+        >
+          L
+        </Text>
+      </ForwardRef>
+    </View>
+    <Image
+      source={
+        Object {
+          "uri": "https://www.starbucks.com.pe/media/cappucino-espresso_tcm92-18666_w1024_n.png",
+        }
+      }
+      style={
+        Object {
+          "height": 444.6666666666667,
+          "width": 375,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <ForwardRef
+      onPress={[Function]}
+      style={
+        Object {
+          "borderColor": "#e1e1e1",
+          "borderRadius": 20,
+          "borderWidth": 1,
+          "paddingHorizontal": 15,
+          "paddingVertical": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#e1e1e1",
+            "fontSize": 20,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        +
+      </Text>
+    </ForwardRef>
+    <View
+      style={
+        Object {
+          "marginVertical": 40,
+          "paddingHorizontal": 30,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#e1e1e1",
+            "fontSize": 25,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        1
+      </Text>
+    </View>
+    <ForwardRef
+      onPress={[Function]}
+      style={
+        Object {
+          "borderColor": "#e1e1e1",
+          "borderRadius": 20,
+          "borderWidth": 1,
+          "paddingHorizontal": 15,
+          "paddingVertical": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#e1e1e1",
+            "fontSize": 20,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        -
+      </Text>
+    </ForwardRef>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <ForwardRef>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#e1e1e1",
+            "borderRadius": 20,
+            "paddingHorizontal": 50,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#376363",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Add to cart
+        </Text>
+      </View>
+    </ForwardRef>
+  </View>
+</View>
+`;

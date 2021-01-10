@@ -42,6 +42,9 @@
     "preset": "react-native",
     "setupFilesAfterEnv": [
       "<rootDir>tests/setup.js"
-    ]
+    ],
+    "verbose": true,
+    "testURL": "http://localhost/",
+    "testEnvironment": "node"
   }
 }

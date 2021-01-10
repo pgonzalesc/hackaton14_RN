@@ -7,7 +7,7 @@ describe('Pruebas en <Menu/>', () => {
     let wrapper = shallow(<Menu/>);
 
     beforeEach(()=>{
-        let wrapper = shallow(<Menu/>);
+        wrapper = shallow(<Menu/>);
     });
 
     test('Debe de mostrar <Menu/> correctamente', () => {
