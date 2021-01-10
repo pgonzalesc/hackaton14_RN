@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <ProductSlider/> Debe de mostrar <ProductSlider/> correctamente 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <ForwardRef(AnimatedComponentWrapper)
+    data={
+      Array [
+        Object {
+          "id": 1,
+          "image": "https://www.starbucks.com.pe/media/cappucino-espresso_tcm92-18666_w1024_n.png",
+          "price": "$80",
+          "title": "Cappuccino Espresso",
+        },
+        Object {
+          "id": 2,
+          "image": "https://www.starbucks.com.pe/media/cafe-mocha-espresso_tcm92-18665_w1024_n.png",
+          "price": "$60",
+          "title": "Café Mocha",
+        },
+        Object {
+          "id": 3,
+          "image": "https://www.starbucks.com.pe/media/mocha-blanco-espresso_tcm92-18664_w1024_n.png",
+          "price": "$70",
+          "title": "Café Mocha Blanco",
+        },
+        Object {
+          "id": 4,
+          "image": "https://www.starbucks.com.pe/media/caramel-macchiato-espresso_tcm92-18662_w1024_n.png",
+          "price": "$45",
+          "title": "Caramel Macchiato",
+        },
+      ]
+    }
+    decelerationRate="fast"
+    horizontal={true}
+    keyExtractor={[Function]}
+    onScroll={[Function]}
+    renderItem={[Function]}
+    scrollEnabled={true}
+    scrollEventThrottle={16}
+    showsHorizontalScrollIndicator={false}
+    snapToAlignment="center"
+  />
+</View>
+`;

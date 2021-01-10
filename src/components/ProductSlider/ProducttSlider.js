@@ -45,7 +45,6 @@ const ProductSlider = ({navigation, data}) => {
           onScroll={Animated.event(
             [{nativeEvent: {contentOffset: {x: scrollX}}}],
             {
-                //listener: (event) => console.log(event),
                 useNativeDriver: true,
             },
           )}

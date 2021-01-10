@@ -2,6 +2,7 @@ import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import {shallow} from 'enzyme';
 import Detalle from '../index';
+
 const onPress = jest.fn();
 
 describe('Pruebas en <Detalle/>', () => {
