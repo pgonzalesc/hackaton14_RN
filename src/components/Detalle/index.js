@@ -1,26 +1,52 @@
-import React from 'react';
-import {StyleSheet, View, Text, Image, Dimensions, TouchableHighlight} from 'react-native';
+import React, {useState} from 'react';
+import {StyleSheet, View, Text, Image, Dimensions, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 const {height, width} = Dimensions.get('window');
-const Detalle = ()=>{
+const Detalle = ( {navigation} )=>{
+    const amount = 1;
+    const unitPrice = 15;
+    const [counter, setCounter] = useState(amount);
+    const [price, setPrice] = useState(15);
+    
+    const handleCounter = (opc) => {
+        if(opc === 'P') {//Plus
+            setCounter( counter + 1 );
+            setPrice( unitPrice*(counter+1) );
+        }
+        else if(opc === 'M') {//Minus
+
+            if(counter - 1 >= 0) {
+                setCounter( counter - 1 );
+                setPrice( unitPrice*(counter-1) );
+            }
+            
+        }
+    }
+
     return (
         <View style={styles.container}>
+            <View style={{marginHorizontal: 20, marginVertical: 15}}>
+                <TouchableOpacity onPress={()=>{navigation.navigate('Home');}}>
+                    <Icon name={'md-arrow-back-outline'} size={30} color={'#e1e1e1'}/>
+                </TouchableOpacity>
+            </View>
             <View style={styles.containerTitle}>
                 <Text style={styles.textTitle}>Americano Coffee</Text>
             </View>
             <View style={styles.containerPrice}>
-                <Text style={styles.textPrice}>$15,00</Text>
+                <Text style={styles.textPrice}>${price}</Text>
             </View>
             <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
                 <View style={{marginHorizontal: 20}}>
-                    <View style={styles.buttonSelected}>
+                    <TouchableOpacity style={styles.buttonSelected}>
                         <Text style={styles.textButtonSelected}>S</Text>
-                    </View>
-                    <View style={styles.button}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button}>
                         <Text style={styles.textButton}>M</Text>
-                    </View>
-                    <View style={styles.button}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button}>
                         <Text style={styles.textButton}>L</Text>
-                    </View>
+                    </TouchableOpacity>
                 </View>
                 <Image 
                  style={styles.image}
@@ -28,22 +54,22 @@ const Detalle = ()=>{
                 />
             </View>
             <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-                <View style={styles.buttonRounded}>
+                <TouchableOpacity style={styles.buttonRounded} onPress={()=>handleCounter('P')}>
                     <Text style={styles.textSign}>+</Text>
-                </View>
+                </TouchableOpacity>
                 <View style={styles.containerAmount}>
-                    <Text style={styles.textAmount}>3</Text>
+                    <Text style={styles.textAmount}>{counter}</Text>
                 </View>
-                <View style={styles.buttonRounded}>
+                <TouchableOpacity style={styles.buttonRounded} onPress={()=>handleCounter('M')}>
                     <Text style={styles.textSign}>-</Text>
-                </View>
+                </TouchableOpacity>
             </View>
             <View style={{alignItems: 'center'}}>
-                <TouchableHighlight>
+                <TouchableOpacity>
                     <View style={{backgroundColor:'#e1e1e1', paddingHorizontal: 50, paddingVertical: 10, borderRadius: 20}}>
                         <Text style={{color: '#376363',fontWeight: 'bold'}}>Add to cart</Text>
                     </View>
-                </TouchableHighlight>
+                </TouchableOpacity>
             </View>
         </View>
     )
