@@ -1,39 +1,80 @@
-import React from 'react';
-import {StyleSheet, View, TouchableHighlight, Text} from 'react-native';
+import React, {useState} from 'react';
+import {StyleSheet, View, TouchableHighlight, TouchableOpacity, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const Menu = ()=>{
+    const [selectedOption, setSelectedOption] = useState({coffee:true, cake:false, snack:false});
+
+    const handleOption = (option) => {
+        if(option === 'coffee')
+            setSelectedOption({coffee:true, cake:false, snack:false});
+        else if(option === 'cake')
+            setSelectedOption({coffee:false, cake:true, snack:false});
+        else if(option === 'snack')
+            setSelectedOption({coffee:false, cake:false, snack:true});
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.containerButton}>
-                <TouchableHighlight style={styles.buttonSelected}>
-                   <View style={{flexDirection:"row", alignItems:"center"}}>
-                       <View style={styles.icono}>
-                            <Icon name={'md-cafe-outline'} size={20}/>
-                       </View>
-                        <Text style={styles.textoSelected}>Coffee</Text>
-                   </View>
-                </TouchableHighlight>
+                {selectedOption.coffee 
+                     ?  <TouchableOpacity style={styles.buttonSelected} onPress={()=>handleOption('coffee')}>
+                            <View style={{flexDirection:"row", alignItems:"center"}}>
+                                <View style={styles.icono}>
+                                    <Icon name={'md-cafe-outline'} size={20}/>
+                                </View>
+                                <Text style={styles.textoSelected}>Coffee</Text>
+                            </View>
+                        </TouchableOpacity>
+                     :  <TouchableOpacity style={styles.button} onPress={()=>handleOption('coffee')}>
+                            <View style={{flexDirection:"row", alignItems:"center"}}>
+                                <View style={styles.icono}>
+                                    <Icon name={'md-cafe-outline'} size={20}/>
+                                </View>
+                                <Text style={styles.texto}>Coffee</Text>
+                            </View>
+                        </TouchableOpacity>
+                }
             </View>
             <View style={styles.containerButton}>
-                <TouchableHighlight style={styles.button}>
-                    <View style={{flexDirection:"row", alignItems:"center"}}>
-                        <View style={styles.icono}>
-                            <Icon name={'md-ice-cream-outline'} size={20}/>
-                        </View>
-                        <Text style={styles.texto}>Cake</Text>
-                   </View>
-                </TouchableHighlight>
+                {selectedOption.cake 
+                     ?  <TouchableOpacity style={styles.buttonSelected} onPress={()=>handleOption('cake')}>
+                            <View style={{flexDirection:"row", alignItems:"center"}}>
+                                <View style={styles.icono}>
+                                    <Icon name={'md-ice-cream-outline'} size={20}/>
+                                </View>
+                                <Text style={styles.textoSelected}>Cake</Text>
+                            </View>
+                        </TouchableOpacity>
+                     :  <TouchableOpacity style={styles.button} onPress={()=>handleOption('cake')}>
+                            <View style={{flexDirection:"row", alignItems:"center"}}>
+                                <View style={styles.icono}>
+                                    <Icon name={'md-ice-cream-outline'} size={20}/>
+                                </View>
+                                <Text style={styles.texto}>Cake</Text>
+                            </View>
+                        </TouchableOpacity>
+                }
             </View>
             <View style={styles.containerButton}>
-                <TouchableHighlight style={styles.button}>
-                    <View style={{flexDirection:"row", alignItems:"center"}}>
-                        <View style={styles.icono}>
-                            <Icon name={'md-fast-food-outline'} size={20}/>
-                        </View>
-                        <Text style={styles.texto}>Snack</Text>
-                    </View>
-                </TouchableHighlight>
+                {selectedOption.snack 
+                     ?  <TouchableOpacity style={styles.buttonSelected} onPress={()=>handleOption('snack')}>
+                            <View style={{flexDirection:"row", alignItems:"center"}}>
+                                <View style={styles.icono}>
+                                    <Icon name={'md-fast-food-outline'} size={20}/>
+                                </View>
+                                <Text style={styles.textoSelected}>Snack</Text>
+                            </View>
+                        </TouchableOpacity>
+                     :  <TouchableOpacity style={styles.button} onPress={()=>handleOption('snack')}>
+                            <View style={{flexDirection:"row", alignItems:"center"}}>
+                                <View style={styles.icono}>
+                                    <Icon name={'md-fast-food-outline'} size={20}/>
+                                </View>
+                                <Text style={styles.texto}>Snack</Text>
+                            </View>
+                        </TouchableOpacity>
+                }
             </View>
         </View>
     );
