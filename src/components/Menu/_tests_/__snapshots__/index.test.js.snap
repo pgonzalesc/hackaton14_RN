@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <Menu/> Debe de mostrar <Menu/> correctamente 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "margin": 10,
+        "padding": 10,
+      }
+    }
+  >
+    <ForwardRef
+      onPress={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#308278",
+          "borderRadius": 25,
+          "paddingHorizontal": 15,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 15,
+              "marginRight": 10,
+              "padding": 5,
+            }
+          }
+        >
+          <Icon
+            allowFontScaling={false}
+            name="md-cafe-outline"
+            size={20}
+          />
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#FFF",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Coffee
+        </Text>
+      </View>
+    </ForwardRef>
+  </View>
+  <View
+    style={
+      Object {
+        "margin": 10,
+        "padding": 10,
+      }
+    }
+  >
+    <ForwardRef
+      onPress={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#e1e1e1",
+          "borderRadius": 25,
+          "paddingHorizontal": 15,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 15,
+              "marginRight": 10,
+              "padding": 5,
+            }
+          }
+        >
+          <Icon
+            allowFontScaling={false}
+            name="md-ice-cream-outline"
+            size={20}
+          />
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#000",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Cake
+        </Text>
+      </View>
+    </ForwardRef>
+  </View>
+  <View
+    style={
+      Object {
+        "margin": 10,
+        "padding": 10,
+      }
+    }
+  >
+    <ForwardRef
+      onPress={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#e1e1e1",
+          "borderRadius": 25,
+          "paddingHorizontal": 15,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 15,
+              "marginRight": 10,
+              "padding": 5,
+            }
+          }
+        >
+          <Icon
+            allowFontScaling={false}
+            name="md-fast-food-outline"
+            size={20}
+          />
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#000",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Snack
+        </Text>
+      </View>
+    </ForwardRef>
+  </View>
+</View>
+`;

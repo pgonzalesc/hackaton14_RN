@@ -8,6 +8,8 @@ target 'Hackaton10' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
   target 'Hackaton10Tests' do
     inherit! :complete
     # Pods for testing
