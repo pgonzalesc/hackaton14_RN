@@ -7,6 +7,7 @@ const Detalle = ( {navigation} )=>{
     const unitPrice = 15;
     const [counter, setCounter] = useState(amount);
     const [price, setPrice] = useState(15);
+    const [selectedSize, setSelectedSize] = useState({s:true, m:false, l:false});
     
     const handleCounter = (opc) => {
         if(opc === 'P') {//Plus
@@ -21,6 +22,25 @@ const Detalle = ( {navigation} )=>{
             }
             
         }
+    }
+
+    const handleSize = (size) => {
+        if(size === 'S') {
+            setCounter(amount);
+            setPrice(unitPrice);
+            setSelectedSize({s:true, m:false, l:false});
+        }
+        else if(size === 'M') {
+            setCounter(amount);
+            setPrice(unitPrice+3);
+            setSelectedSize({s:false, m:true, l:false});
+        }
+        else if(size === 'L') {
+            setCounter(amount);
+            setPrice(unitPrice+5);
+            setSelectedSize({s:false, m:false, l:true});
+        }
+            
     }
 
     return (
@@ -38,15 +58,30 @@ const Detalle = ( {navigation} )=>{
             </View>
             <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
                 <View style={{marginHorizontal: 20}}>
-                    <TouchableOpacity style={styles.buttonSelected}>
-                        <Text style={styles.textButtonSelected}>S</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.textButton}>M</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.textButton}>L</Text>
-                    </TouchableOpacity>
+                    {selectedSize.s 
+                     ?  <TouchableOpacity style={styles.buttonSelected} onPress={()=>handleSize('S')}> 
+                            <Text style={styles.textButtonSelected}>S</Text>
+                        </TouchableOpacity>
+                     :  <TouchableOpacity style={styles.button} onPress={()=>handleSize('S')}>
+                            <Text style={styles.textButton}>S</Text>
+                        </TouchableOpacity>
+                    }
+                    {selectedSize.m
+                     ?  <TouchableOpacity style={styles.buttonSelected} onPress={()=>handleSize('M')}> 
+                            <Text style={styles.textButtonSelected}>M</Text>
+                        </TouchableOpacity>
+                     :  <TouchableOpacity style={styles.button} onPress={()=>handleSize('M')}>
+                            <Text style={styles.textButton}>M</Text>
+                        </TouchableOpacity>
+                    }
+                    {selectedSize.l
+                     ?  <TouchableOpacity style={styles.buttonSelected} onPress={()=>handleSize('L')}> 
+                            <Text style={styles.textButtonSelected}>L</Text>
+                        </TouchableOpacity>
+                     :  <TouchableOpacity style={styles.button} onPress={()=>handleSize('L')}>
+                            <Text style={styles.textButton}>L</Text>
+                        </TouchableOpacity>
+                    }
                 </View>
                 <Image 
                  style={styles.image}
