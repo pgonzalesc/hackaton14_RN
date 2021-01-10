@@ -2,15 +2,10 @@ import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import {shallow} from 'enzyme';
 import Detalle from '../index';
-
 const onPress = jest.fn();
-
 describe('Pruebas en <Detalle/>', () => {
     let wrapper = shallow(<Detalle/>);
-
-    beforeEach(()=>{
-        wrapper = shallow(<Detalle/>);
-    });
+    beforeEach(()=>{ wrapper = shallow(<Detalle/>); });
 
     test('Debe de mostrar <Detalle/> correctamente', () => {
         expect(wrapper).toMatchSnapshot();
